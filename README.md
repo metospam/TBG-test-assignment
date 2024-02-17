@@ -118,6 +118,7 @@ php artisan serve" tabindex="0" role="button">
 </svg>
     </clipboard-copy>
   </div></div>
+  <p dir="auto"><em><strong>Note</strong></em> : It's recommended to have a clean database before seeding. You can refresh your migrations at any point to clean the database by running the following command</p>
   <p dir="auto"><strong>Populate the database with seed data with relationships which includes users, articles, comments, tags, favorites and follows. This can help you to quickly start testing the api or couple a frontend and start using it with ready content.</strong></p>
   <p dir="auto">Run the database seeder and you're done</p>
   <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>php artisan db:seed
