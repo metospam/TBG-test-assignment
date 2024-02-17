@@ -118,7 +118,6 @@ php artisan serve" tabindex="0" role="button">
 </svg>
     </clipboard-copy>
   </div></div>
-  <p dir="auto">To send files through Telegram, you need to configure TELEGRAM_BOT_TOKEN, and to send files via email, you need to configure SMTP.</p>
   <p dir="auto"><strong>Populate the database with seed data with relationships which includes users, articles, comments, tags, favorites and follows. This can help you to quickly start testing the api or couple a frontend and start using it with ready content.</strong></p>
   <p dir="auto">Run the database seeder and you're done</p>
   <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>php artisan db:seed
@@ -142,5 +141,6 @@ php artisan serve" tabindex="0" role="button">
       <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
     <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
 </svg>
+        <p dir="auto">To send files through Telegram, you need to configure TELEGRAM_BOT_TOKEN, and to send files via email, you need to configure SMTP.</p>
     </clipboard-copy>
   </div></div>
