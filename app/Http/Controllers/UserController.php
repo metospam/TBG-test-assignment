@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Factories\SendServiceFactory;
 use App\Http\Requests\CreateUserRequest;
 use App\Http\Requests\GetUsersRequest;
-use App\Http\Requests\PathRequest;
 use App\Http\Requests\SendRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Repositories\UserRepository;
@@ -21,6 +20,7 @@ class UserController extends Controller
      * @param UserRepository $userRepository
      * @param TelegramService $telegramService
      * @param SendServiceFactory $sendServiceFactory
+     * @param UploadService $uploadService
      */
     public function __construct(
         protected UserRepository     $userRepository,
