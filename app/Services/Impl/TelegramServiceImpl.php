@@ -40,7 +40,7 @@ class TelegramServiceImpl implements TelegramService
      * @param string $username The username for which to retrieve the chat ID.
      * @return string The chat ID of the user, or an empty string if not found.
      */
-    public function getChatId(string $username): string
+    private function getChatId(string $username): string
     {
         $chats = $this->getChatsData();
         $results = $chats['result'];
@@ -62,7 +62,7 @@ class TelegramServiceImpl implements TelegramService
      *
      * @return array An array containing chat data retrieved from the Telegram API.
      */
-    public function getChatsData(): array
+    private function getChatsData(): array
     {
         $botToken = config('telegram.token');
         $telegramApiUrl = "https://api.telegram.org/bot$botToken";
