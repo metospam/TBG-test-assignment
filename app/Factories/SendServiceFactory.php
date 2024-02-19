@@ -2,10 +2,9 @@
 
 namespace App\Factories;
 
-use App\Services\MailService;
-use App\Services\TelegramService;
+use App\Services\SendService;
 
 interface SendServiceFactory
 {
-    public function create(string $type): TelegramService|MailService;
+    public function create(string $type): SendService;
 }

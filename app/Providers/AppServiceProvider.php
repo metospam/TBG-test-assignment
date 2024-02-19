@@ -10,6 +10,7 @@ use App\Services\Impl\MailServiceImpl;
 use App\Services\Impl\TelegramServiceImpl;
 use App\Services\Impl\UploadServiceImpl;
 use App\Services\MailService;
+use App\Services\SendService;
 use App\Services\TelegramService;
 use App\Services\UploadService;
 use Illuminate\Support\ServiceProvider;
@@ -30,11 +31,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->app->bind(TelegramService::class, TelegramServiceImpl::class);
-        $this->app->bind(SendServiceFactory::class, SendServiceFactoryImpl::class);
-        $this->app->bind(MailService::class, MailServiceImpl::class);
         $this->app->bind(UploadService::class, UploadServiceImpl::class);
         $this->app->bind(UserRepository::class, UserRepositoryImpl::class);
+        $this->app->bind(TelegramService::class, TelegramServiceImpl::class);
+        $this->app->bind(MailService::class, MailServiceImpl::class);
+
+        $this->app->singleton(SendServiceFactory::class, function () {
+            return new SendServiceFactoryImpl();
+        });
+
         $this->app->bind(TeleBot::class, function () {
             try {
                 return new TeleBot(config('telegram.token'));

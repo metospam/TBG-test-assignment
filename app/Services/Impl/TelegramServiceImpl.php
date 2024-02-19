@@ -22,14 +22,14 @@ class TelegramServiceImpl implements TelegramService
     /**
      * Sends a file to the user identified by the given username.
      *
-     * @param string $username The username of the recipient.
+     * @param string $toSend The username of the recipient.
      * @param string $filePath The path to the file to be sent.
      * @return void
      */
-    public function sendFile(string $username, string $filePath): void
+    public function sendFile(string $toSend, string $filePath): void
     {
         $this->bot->sendDocument([
-            'chat_id' => $this->getChatId($username),
+            'chat_id' => $this->getChatId($toSend),
             'document' => $filePath,
         ]);
     }

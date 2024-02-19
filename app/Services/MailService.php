@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-interface MailService
+interface MailService extends SendService
 {
-    public function sendFile(string $email, string $filePath): void;
+
 }

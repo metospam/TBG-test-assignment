@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-interface TelegramService
+interface TelegramService extends SendService
 {
-    public function sendFile(string $username, string $filePath): void;
+
 }
